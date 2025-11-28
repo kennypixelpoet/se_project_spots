@@ -1,7 +1,7 @@
 Project 3: Spots
 
 ## Live Demo
-🔗 
+🔗 https://kennypixelpoet.github.io/se_project_spots/
 
 
 **Description** 
