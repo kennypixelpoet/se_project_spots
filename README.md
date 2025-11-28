@@ -1,6 +1,11 @@
-# Project 3: Spots
+Project 3: Spots
 
-##Description
+## Live Demo
+🔗 
+
+
+**Description** 
+
 A Photo sharing platfrom where users can upload/share their favorite photos and 
 favorite destination.
 

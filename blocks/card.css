@@ -1,22 +1,17 @@
 .card {
-    width: 413px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .card__image {
+    margin-bottom: 12px;
     height: 413px;
-    width: 413px;
     object-fit: cover;
-    display: block;
     border-radius: 8px;
 }
 
 .card__content {
     display: flex;
-    margin: 0;
     align-items: center;
     justify-content: space-between;
 }
@@ -24,46 +19,37 @@
 .card__title {
     white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    max-width: 353px;
     font-weight: 500;
     font-size: 20px;
+    line-height: 1.2;
 }
 
 .card__like-btn {
     background-image: url(../images/heart.svg);
     cursor: pointer;
+    opacity: 40%;
     width: 23px;
     height: 20px;
     border: none;
+    padding: 0;
+    margin: 0;
     background-color: transparent;
 }
 
 .card__like-btn:hover {
-    opacity: 40%;
+    opacity: 100%;
 }
 
 @media screen and (max-width: 630px) {
-    .card {
-        overflow: visible;
-        width: 288px;
-        height: 318px;
-        margin-bottom: 20px;
-    } 
 
     .card__image {
-        width: 288px;
         height: 288px;
     }
 
     .card__title {
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-        max-width: 100%;
-    }
-
-
-    .card__content {
-        margin-left: auto;
-        margin-top: auto;
+        max-width: 235px;
     }
 }
