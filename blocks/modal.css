@@ -1,5 +1,7 @@
 .modal {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
     background-color: #00000080;
     position: fixed;
     top: 0;
@@ -10,10 +12,12 @@
     align-items: center;
     z-index: 11;
     padding: 10px;
+    transition: opacity 0.3s ease;
 }
 
 .modal_is-opened {
-    display: flex;
+    visibility: visible;
+    opacity: 1;
 }
 
 .modal__content {
