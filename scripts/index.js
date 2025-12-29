@@ -1,5 +1,14 @@
 console.log("JavaScript is connected")
-    //Edit Profile modal
+
+function openModal(modal) {
+    modal.classList.add("modal_is-opened")
+}
+
+function closeModal(modal) {
+    modal.classList.remove("modal_is-opened")
+}
+
+            //Edit Profile modal
 
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
@@ -15,18 +24,18 @@ const profileDescriptionInput = editProfileModal.querySelector("#profile-descrip
 editProfileBtn.addEventListener("click",function() {
     profileNameInput.value = profileName.textContent
     profileDescriptionInput.value = profileDescription.textContent
-    editProfileModal.classList.add("modal_is-opened")
+    openModal(editProfileModal)
 });
 
 editProfileCloseBtn.addEventListener("click", function() {
-    editProfileModal.classList.remove("modal_is-opened")
+    closeModal(editProfileModal)
 });
 
 editProfileForm.addEventListener("submit", function (event) {
     event.preventDefault()
     profileName.textContent = profileNameInput.value
     profileDescription.textContent = profileDescriptionInput.value
-    editProfileModal.classList.remove("modal_is-opened")
+    closeModal(editProfileModal)
     console.log("Edit Profile form submitted")
 });
 
@@ -41,18 +50,18 @@ const postLinkInput = newPostModal.querySelector("#card-image-input");
 const postNameInput = newPostModal.querySelector("#profile-caption-input");
 
 newPostBtn.addEventListener("click", function() {
-    newPostModal.classList.add("modal_is-opened")
+    openModal(newPostModal)
 });
 
 function handleAddCardSubmit(evt) {
     evt.preventDefault()
     console.log("Image link", postLinkInput.value)
     console.log("Caption:", postNameInput.value)
-    newPostModal.classList.remove("modal_is-opened")
+    closeModal(newPostModal)
 };
 
 addCardFormElement.addEventListener("submit", handleAddCardSubmit);
 
 newPostCloseBtn.addEventListener("click", function() {
-    newPostModal.classList.remove("modal_is-opened")
+    closeModal(newPostModal)
 });
