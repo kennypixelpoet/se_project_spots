@@ -1,5 +1,3 @@
-console.log("JavaScript is connected")
-
 function openModal(modal) {
     modal.classList.add("modal_is-opened")
 }
@@ -17,7 +15,7 @@ const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 
-const editProfileForm = editProfileModal.querySelector(".modal__form");
+const editProfileForm = document.forms["editProfileForm"];
 const profileNameInput = editProfileModal.querySelector("#profile-name-input");
 const profileDescriptionInput = editProfileModal.querySelector("#profile-description-input");
 

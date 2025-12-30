@@ -33,7 +33,7 @@
 }
 
 .profile__description {
-    margin-right: 20px;
+    margin: 0;
     color: #212121B2;
     max-width: 400px;
     font-weight: 500;
