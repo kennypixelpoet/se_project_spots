@@ -44,6 +44,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: transparent;
     border: none;
     cursor: pointer;
     transition: opacity 0.3s ease;
@@ -129,6 +130,11 @@
     border-radius: 8px;
 }
 
+.modal__title {
+    font-size: 20px;
+    line-height: 100%;
+}
+
 .modal__input {
     display: flex;
     flex-direction: row;
@@ -138,6 +144,14 @@
     padding: 16px 12px;
     gap: 10px;
     height: 48px;
+}
+
+.modal__content {
+    padding: 32px 12px;
+}
+
+.modal__close-btn {
+    right: 12px;
 }
 
 }
