@@ -1,3 +1,36 @@
+const intialCards = [
+    {
+        name: "Val Thorens",
+        link: "./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+    }, 
+
+    {
+        name: "Resturant terrace",
+        link: "./images/2-photo-by-ceiline-from-pexels.jpg"
+    },
+
+    {
+        name: "An outdoor cafe",
+        link: "./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
+    },
+
+    {
+        name: "A very long bridge, over the forest...",
+        link: "./images/4-photo-by-maurice-laschet-from-pexels.jpg" 
+    },
+
+    {
+        name: "Tunnel with morning light",
+        link: "./images/5-photo-by-van-anh-nguyen-from-pexels.jpg" 
+    },
+
+    {
+        name: "Mountain house",
+        link: "./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
+    }
+];
+
+
 function openModal(modal) {
     modal.classList.add("modal_is-opened")
 }
@@ -62,4 +95,8 @@ addCardFormElement.addEventListener("submit", handleAddCardSubmit);
 
 newPostCloseBtn.addEventListener("click", function() {
     closeModal(newPostModal)
+});
+
+intialCards.forEach(function (card) {
+    console.log(card.name);
 });
