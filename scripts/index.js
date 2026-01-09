@@ -1,11 +1,11 @@
-const intialCards = [
+const initialCards = [
     {
         name: "Val Thorens",
         link: "./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
     }, 
 
     {
-        name: "Resturant terrace",
+        name: "Restaurant terrace",
         link: "./images/2-photo-by-ceiline-from-pexels.jpg"
     },
 
@@ -97,6 +97,6 @@ newPostCloseBtn.addEventListener("click", function() {
     closeModal(newPostModal)
 });
 
-intialCards.forEach(function (card) {
+initialCards.forEach(function (card) {
     console.log(card.name);
 });
