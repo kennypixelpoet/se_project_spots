@@ -91,7 +91,7 @@ function handleAddCardSubmit(evt) {
     closeModal(newPostModal)
 };
 
-addCardFormElement.addEventListener("submit", handleAddCardSubmit);
+addCardFormElement.addEventListener("submit", handleAddCardSubmit)
 
 newPostCloseBtn.addEventListener("click", function() {
     closeModal(newPostModal)
