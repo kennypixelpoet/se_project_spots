@@ -48,10 +48,12 @@
     border: none;
     cursor: pointer;
     transition: opacity 0.3s ease;
+    filter: invert(1);
 }
 
 .modal__close-btn:hover {
     opacity: 1;
+    filter: invert(0);
 }
 
 .modal__submit-btn {
@@ -114,6 +116,42 @@
 
 .modal__input::placeholder {
     color: #21212166;
+}
+
+.modal__content.modal__content_type_preview {
+    padding: 0px;
+    background-color: transparent;
+    border-radius: 0;
+    box-sizing: border-box;
+    position: relative;
+    max-width: auto;
+    width: auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.modal__preview-image {
+    display: block;
+    max-height: 80vh;
+    max-width: 80vw;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.modal__caption {
+    color: #fff;
+    margin: 8px 0 0;
+    font-size: 16px;
+}
+
+.modal__content.modal__content_type_preview .modal__close-btn {
+    top: 0;
+    right: -40px;
+    opacity: 1;
 }
 
 @media screen and (max-width: 630px) {

@@ -27,9 +27,16 @@ const initialCards = [
     {
         name: "Mountain house",
         link: "./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
+    },
+
+    {
+        name: "Landscape", 
+        link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg"
     }
 ];
 
+const cardsList = document.querySelector(".cards__list");
+const cardTemplate = document.querySelector("#card-template");
 
 function openModal(modal) {
     modal.classList.add("modal_is-opened")
@@ -38,6 +45,46 @@ function openModal(modal) {
 function closeModal(modal) {
     modal.classList.remove("modal_is-opened")
 }
+
+const previewModal = document.querySelector("#preview-modal");
+const previewImage = previewModal.querySelector(".modal__preview-image");
+const previewCaption = previewModal.querySelector(".modal__caption");
+const previewCloseBtn = previewModal.querySelector(".modal__close-btn");
+
+previewCloseBtn.addEventListener("click", function () {
+    closeModal(previewModal);
+});
+
+function getCardElement(data) {
+    const cardElement = cardTemplate.content.querySelector(".card").cloneNode(true);
+
+    const cardTitle = cardElement.querySelector(".card__title");
+    const cardImage = cardElement.querySelector(".card__image");
+    const likeButton = cardElement.querySelector(".card__like-btn");
+    const deleteButton = cardElement.querySelector(".card__delete-btn");
+
+    cardTitle.textContent = data.name;
+    cardImage.src = data.link;
+    cardImage.alt = data.name;
+
+    likeButton.addEventListener("click", () => {
+        likeButton.classList.toggle("card__like-btn_active")
+    });
+
+    deleteButton.addEventListener("click", function () {
+        cardElement.remove();
+    });
+
+    cardImage.addEventListener("click", function() {
+        previewImage.src = data.link;
+        previewImage.alt = data.name;
+        previewCaption.textContent = data.name;
+        openModal(previewModal);
+    });
+
+    return cardElement;
+}
+
 
             //Edit Profile modal
 
@@ -85,10 +132,19 @@ newPostBtn.addEventListener("click", function() {
 });
 
 function handleAddCardSubmit(evt) {
-    evt.preventDefault()
-    console.log("Image link", postLinkInput.value)
-    console.log("Caption:", postNameInput.value)
-    closeModal(newPostModal)
+    evt.preventDefault();
+
+    const newCardData = {
+        name:postNameInput.value,
+        link: postLinkInput.value
+    };
+
+const cardElement = getCardElement(newCardData);
+cardsList.prepend(cardElement);
+
+closeModal(newPostModal);
+addCardFormElement.reset();
+
 };
 
 addCardFormElement.addEventListener("submit", handleAddCardSubmit)
@@ -97,6 +153,7 @@ newPostCloseBtn.addEventListener("click", function() {
     closeModal(newPostModal)
 });
 
-initialCards.forEach(function (card) {
-    console.log(card.name);
+initialCards.forEach(function (cardData) {
+    const cardElement = getCardElement(cardData);
+    cardsList.append(cardElement);
 });
