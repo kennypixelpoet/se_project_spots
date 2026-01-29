@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="./pages/index.css"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 </head>
+
+<!--
+Note for the reviwer, I currently have been saving my work with VS code workspace, 
+I know for now it is ok but for in real world, should I stop using code workspace and just use 
+right-click on my index.HTML file and select open with VS code?-->
+
 <body>
     <div class="page">
     <header class="header">
@@ -55,7 +61,7 @@
             <div class="modal" id="preview-modal">
               <div class="modal__content modal__content_type_preview">
                 <button type="button" class="modal__close-btn"></button>
-                <img class="modal__preview-image" alt="">
+                <img class="modal__preview-image" alt="#">
                 <p class="modal__caption"></p>
               </div>
             </div>
@@ -77,6 +83,7 @@
           type="text" 
           class="modal__input"
           placeholder="Type your name"
+          required
           />
         </label>
         <label for="profile-description-input" class="modal__label">
@@ -86,6 +93,7 @@
           type="text" 
           class="modal__input"
           placeholder="Describe yourself"
+          required
           />
         </label>
         <button type="submit" class="modal__submit-btn">Save</button>
@@ -103,6 +111,7 @@
           id="card-image-input" 
           type="url" 
           class="modal__input"
+          required
           placeholder="Paste a link to the picture"
           />
         </label>
@@ -112,6 +121,7 @@
           id="profile-caption-input" 
           type="text" 
           class="modal__input"
+          required
           placeholder="Type your caption"
           />
         </label>

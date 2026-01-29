@@ -28,11 +28,6 @@ const initialCards = [
         name: "Mountain house",
         link: "./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
     },
-
-    {
-        name: "Landscape", 
-        link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg"
-    }
 ];
 
 const cardsList = document.querySelector(".cards__list");

@@ -9,6 +9,21 @@
     height: 413px;
     object-fit: cover;
     border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+/* Note for the reviewer, to me the effect to indicate the image is clickable, seems too dark 
+but if this is acceptable then I can leave. Or if its acceptable adding a different shade (if that 
+is the right term */
+
+.card__image:hover {
+    opacity: 1;
+}
+
+.card__image:focus {
+    opacity: 1;
+    outline: 2px solid #007bff;
 }
 
 .card__content {
@@ -31,12 +46,14 @@
 .card__like-btn {
     background-image: url(../images/heart.svg);
     cursor: pointer;
-    opacity: 40%;
+    opacity: 0.4;
     width: 23px;
     height: 20px;
     border: none;
     padding: 0;
     margin: 0;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: transparent;
 }
 

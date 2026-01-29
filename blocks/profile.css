@@ -27,7 +27,6 @@
    max-width: 420px; 
    display: -webkit-box;
    -webkit-line-clamp: 3;
-   line-clamp: 3; 
    -webkit-box-orient: vertical; 
    overflow: hidden;
 }
@@ -42,7 +41,7 @@
 
 .profile__edit-btn {
     margin-top: auto;
-    opacity: 70%;
+    opacity: 0.7;
     background: transparent;
     border: none;
     box-shadow: none;
@@ -53,6 +52,10 @@
     font-weight: 500;
     font-size: 16px;
 }
+
+/*note for the rewviwer: I see that my close button for the Edit Profile window and the
+New Post close button, is lighter until it is hovered over, is this acceptable 
+or do I need to make it dark so it can be seen */
 
 .profile__edit-btn:hover {
     opacity: 100%;
