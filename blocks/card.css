@@ -10,20 +10,6 @@
     object-fit: cover;
     border-radius: 8px;
     cursor: pointer;
-    opacity: 0.4;
-}
-
-/* Note for the reviewer, to me the effect to indicate the image is clickable, seems too dark 
-but if this is acceptable then I can leave. Or if its acceptable adding a different shade (if that 
-is the right term */
-
-.card__image:hover {
-    opacity: 1;
-}
-
-.card__image:focus {
-    opacity: 1;
-    outline: 2px solid #007bff;
 }
 
 .card__content {
