@@ -1,3 +1,16 @@
+import { enableValidation, clearValidation } from "./validation.js";
+
+const validationConfig = {
+  formSelector: ".modal__form",
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__submit-btn",
+  inactiveButtonClass: "modal__submit-btn_disabled",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error_visible"
+};
+
+enableValidation(validationConfig);
+
 const initialCards = [
     {
         name: "Val Thorens",
@@ -33,13 +46,35 @@ const initialCards = [
 const cardsList = document.querySelector(".cards__list");
 const cardTemplate = document.querySelector("#card-template");
 
+function handleEscape(evt) {
+    if (evt.key === "Escape") {
+        const openedModal = document.querySelector(".modal_is-opened");
+
+        if (openedModal) {
+            closeModal(openedModal);
+        }
+    }
+}
+
 function openModal(modal) {
     modal.classList.add("modal_is-opened")
+    document.addEventListener("keydown", handleEscape);
 }
 
 function closeModal(modal) {
     modal.classList.remove("modal_is-opened")
+    document.removeEventListener("keydown", handleEscape);
 }
+
+const modalList = document.querySelectorAll(".modal");
+
+modalList.forEach((modal) => {
+    modal.addEventListener("click", function(evt) {
+        if (evt.target.classList.contains("modal")) {
+            closeModal(modal);
+        }
+    });
+});
 
 const previewModal = document.querySelector("#preview-modal");
 const previewImage = previewModal.querySelector(".modal__preview-image");
@@ -97,6 +132,8 @@ const profileDescriptionInput = editProfileModal.querySelector("#profile-descrip
 editProfileBtn.addEventListener("click",function() {
     profileNameInput.value = profileName.textContent
     profileDescriptionInput.value = profileDescription.textContent
+    
+    clearValidation(editProfileForm, validationConfig);
     openModal(editProfileModal)
 });
 
@@ -139,13 +176,13 @@ cardsList.prepend(cardElement);
 
 closeModal(newPostModal);
 addCardFormElement.reset();
-
-};
+clearValidation(addCardFormElement, validationConfig);
+}
 
 addCardFormElement.addEventListener("submit", handleAddCardSubmit)
 
 newPostCloseBtn.addEventListener("click", function() {
-    closeModal(newPostModal)
+    closeModal(newPostModal);
 });
 
 initialCards.forEach(function (cardData) {

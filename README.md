@@ -15,10 +15,12 @@ favorite destination.
 * Desktop view of the Spots Project. (/images/SpotsDesktopview)
 * Mobile view of the Spots Project. (/images/Mobileview)
 
-**VideoPitch**
+**Spots Project Video Pitch**
 
-https://drive.google.com/file/d/1CqVox7G1pirplv46-0QqWMvXE3nUoRmp/view?usp=sharing
-  
+[Spots Project Part 1 Modal Interactions and Photo Cards](https://drive.google.com/file/d/1CqVox7G1pirplv46-0QqWMvXE3nUoRmp/view?usp=sharing)
+[Spots Project Part 2 Form Validation and Modal Features](https://www.loom.com/share/0c77767b30ad4c388e14046e0c8884ac)
+
+
 **Technology Used**
 
 * Figma  
@@ -27,3 +29,5 @@ https://drive.google.com/file/d/1CqVox7G1pirplv46-0QqWMvXE3nUoRmp/view?usp=shari
 * HTML
 * CSS
 * BEM Methology
+* Form Validation
+* Close Modal Interactions
