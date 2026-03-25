@@ -87,7 +87,7 @@ right-click on my index.HTML file and select open with VS code?-->
           maxlength="40"
           required
           />
-        <span class="profile-name-input-error model__error"></span>
+        <span class="profile-name-input-error modal__error"></span>
         </label>
         <label for="profile-description-input" class="modal__label">
           Description
@@ -96,9 +96,11 @@ right-click on my index.HTML file and select open with VS code?-->
           type="text" 
           class="modal__input"
           placeholder="Describe yourself"
+          minlength="2"
+          maxlength="200"
           required
           />
-          <span class="profile-description-input-error model__error"></span>
+          <span class="profile-description-input-error modal__error"></span>
         </label>
         <button type="submit" class="modal__submit-btn">Save</button>
       </form>
@@ -118,7 +120,7 @@ right-click on my index.HTML file and select open with VS code?-->
           placeholder="Paste a link to the picture"
           required
           />
-          <span class="card-image-input-error model__error"></span>
+          <span class="card-image-input-error modal__error"></span>
         </label>
         <label for="profile-caption-input" class="modal__label">
           Caption
@@ -128,10 +130,10 @@ right-click on my index.HTML file and select open with VS code?-->
           class="modal__input"
           placeholder="Type your caption"
           minlength="2"
-          maxlength="200"
+          maxlength="30"
           required
           />
-          <span class="profile-caption-input-error model__error"></span>
+          <span class="profile-caption-input-error modal__error"></span>
         </label>
         <button type="submit" class="modal__submit-btn">Save</button>
       </form>

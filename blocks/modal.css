@@ -71,6 +71,11 @@
     font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
+.modal__submit-btn_disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 .modal__submit-btn:hover {
     background-color: #1a1a1a;
 }
@@ -106,6 +111,21 @@
     border: 1px solid #ccc;
     transition: background-color 0.2s, border-color 0.2s;
     box-sizing: border-box;
+}
+
+.modal__input_type_error {
+    border-bottom: 2px solid #ff0000;
+}
+
+.modal__error {
+    display: none;
+    color: #ff0000;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.modal__error_visible {
+    display: block;
 }
 
 .modal__input:hover {

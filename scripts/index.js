@@ -57,12 +57,12 @@ function handleEscape(evt) {
 }
 
 function openModal(modal) {
-    modal.classList.add("modal_is-opened")
+    modal.classList.add("modal_is-opened");
     document.addEventListener("keydown", handleEscape);
 }
 
 function closeModal(modal) {
-    modal.classList.remove("modal_is-opened")
+    modal.classList.remove("modal_is-opened");
     document.removeEventListener("keydown", handleEscape);
 }
 
@@ -134,7 +134,7 @@ editProfileBtn.addEventListener("click",function() {
     profileDescriptionInput.value = profileDescription.textContent
     
     clearValidation(editProfileForm, validationConfig);
-    openModal(editProfileModal)
+    openModal(editProfileModal);
 });
 
 editProfileCloseBtn.addEventListener("click", function() {
@@ -142,11 +142,11 @@ editProfileCloseBtn.addEventListener("click", function() {
 });
 
 editProfileForm.addEventListener("submit", function (event) {
-    event.preventDefault()
-    profileName.textContent = profileNameInput.value
-    profileDescription.textContent = profileDescriptionInput.value
-    closeModal(editProfileModal)
-    console.log("Edit Profile form submitted")
+    event.preventDefault();
+    profileName.textContent = profileNameInput.value;
+    profileDescription.textContent = profileDescriptionInput.value;
+    closeModal(editProfileModal);
+    console.log("Edit Profile form submitted");
 });
 
     //New Post modal
